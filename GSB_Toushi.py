@@ -151,35 +151,35 @@ async def new_group_handle(event):
     global  Forest , Swamp , Valley  , RandomQuest ,  a
 
 
-    if "Stop" in event.raw_text:
+    if "TStop" in event.raw_text:
         Forest = Swamp = Valley = RandomQuest = False
         a=0
     
-    if "Random" in event.raw_text:
+    if "TRandom" in event.raw_text:
         RandomQuest = True
         Forest = Swamp = Valley = False
         await client.send_message('chtwrsbot','🗺Quests')
         a=1
 
-    if "Forest" in event.raw_text:
+    if "TForest" in event.raw_text:
         Forest = True
         Swamp = Valley = RandomQuest = False
         await client.send_message('chtwrsbot','🗺Quests')
         a=1
 
-    if "Swamp" in event.raw_text:
+    if "TSwamp" in event.raw_text:
         Swamp = True
         Forest = Valley = RandomQuest = False
         await client.send_message('chtwrsbot','🗺Quests')
         a=1
 
-    if "Valley" in event.raw_text:
+    if "TValley" in event.raw_text:
         Forest = Swamp = RandomQuest = False
         Valley = True
         await client.send_message('chtwrsbot','🗺Quests')
         a=1
 
-    if "Ff" in event.raw_text:
+    if "TFf" in event.raw_text:
         a=2
         await client.send_message('chtwrsbot','▶️Fast fight')
 

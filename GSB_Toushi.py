@@ -128,7 +128,13 @@ async def new_quest_handle(event):
         if "As I walk through the valley of the shadow of death," in event.raw_text:
             time.sleep(randint(5,10))
             await client.send_message('chtwrsbot','🗺Quests')
- #arenas
+ 
+
+    if "You met some hostile creatures" in event.raw_text:
+        await client.forward_messages(-1001561932494,event.message)
+        await client.forward_messages('deerhorn_os_bot',event.message)
+
+#arenas
     if a==2:
         if "stands victorious over" in event.raw_text or "You didn’t find an opponent. Return later" in event.raw_text:
             await client.send_message('chtwrsbot','▶️Fast fight')

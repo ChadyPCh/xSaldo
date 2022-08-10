@@ -32,6 +32,7 @@ async def new_quest_handle(event):
         a=1
 
     if a==1:
+        if "Who knows what is lurking in mud." in event.raw_text:
             if RandomQuest:
                 if "🔥" in event.raw_text:
                     if event.raw_text.find("🔥") == 121:

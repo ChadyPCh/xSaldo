@@ -32,10 +32,21 @@ async def new_quest_handle(event):
         a=1
 
     if a==1:
-        if "Who knows what is lurking in mud." in event.raw_text:
             if RandomQuest:
-                time.sleep(3)
-                await event.click(0,randint(0,2))
+                if "🔥" in event.raw_text:
+                    if event.raw_text.find("🔥") == 121:
+                        time.sleep(1)
+                        await event.click(0,2)
+                    if event.raw_text.find("🔥") == 64:
+                        time.sleep(1)
+                        await event.click(0,1)
+                    if event.raw_text.find("🔥") == 13:
+                        time.sleep(1)
+                        await event.click(0,0)
+                else:
+                    time.sleep(3)
+                    await event.click(0,randint(0,2))
+
 
             if Forest:
                 time.sleep(3)
